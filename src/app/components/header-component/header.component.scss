@@ -1,0 +1,16 @@
+.links{
+    gap: 1em;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    text-decoration: underline;
+    transition: all 1s;
+}

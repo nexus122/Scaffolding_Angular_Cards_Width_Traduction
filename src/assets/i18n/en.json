@@ -1,0 +1,14 @@
+{
+    "demo": {
+        "title": "Translation demo",
+        "text": "This is a simple demonstration app for ngx-translate",
+        "random": "This is a random number {{number}}"
+    },
+    "header":{
+        "title": "Translate Demo"
+    },
+    "lenguajes":{
+        "english": "English",
+        "spanish": "Spanish"
+    }
+}

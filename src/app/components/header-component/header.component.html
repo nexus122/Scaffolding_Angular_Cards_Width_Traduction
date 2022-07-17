@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+    [matMenuTriggerFor]="menu"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="['/']">Demo</button>
+  </mat-menu>
+
+  <span>{{ "header.title" | translate }}</span>
+  <span class="example-spacer"></span>
+  <div class="links ml-4 is-flex is-2">
+    <a (click)="useLanguage('es')">Español</a> /
+    <a (click)="useLanguage('en')">Ingles</a>
+  </div>
+</mat-toolbar>

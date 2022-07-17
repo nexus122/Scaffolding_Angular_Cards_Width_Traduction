@@ -1,0 +1,9 @@
+<div class="box">
+    <h1>{{'demo.title' | translate}}</h1>
+    <p><b>{{'demo.text' | translate}}</b></p>
+    <p>{{'demo.random' | translate:{'number':randomNumber} }}</p>
+    <div class="">
+        <button class="button" (click)="useLanguage('en')">🇺🇸 {{'lenguajes.english' | translate}} </button>
+        <button class="button ml-1" (click)="useLanguage('es')">🇪🇸 {{'lenguajes.spanish' |translate}}</button>
+    </div>
+</div>
