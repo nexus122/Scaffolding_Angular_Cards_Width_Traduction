@@ -14,19 +14,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponentComponent } from './components/main-component/main-component.component';
 import { HeaderComponent } from './components/header-component/header.component';
 import { FooterComponentComponent } from './components/footer-component/footer-component.component';
-import { HomeTestComponentComponent } from './components/home-test-component/home-test-component.component';
 
 // import ngx-translate and the http loader
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { SectionComponent } from './components/section/section.component';
+import { CardComponent } from './components/card/card.component';
+import { ContainerComponent } from './components/container/container.component';
 
 @NgModule({
   declarations: [
     MainComponentComponent,
     HeaderComponent,
     FooterComponentComponent,
-    HomeTestComponentComponent,
+    SectionComponent,
+    CardComponent,
+    ContainerComponent,
   ],
   imports: [
     BrowserModule,

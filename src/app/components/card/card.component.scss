@@ -1,0 +1,26 @@
+.bg{
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card:hover .panel-info{
+    transform: translate(0px, 0px);
+}
+
+.panel-info{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    color: white;   
+    transform: translate(0px, 100px);   
+    transition: 0.5s;  
+}
