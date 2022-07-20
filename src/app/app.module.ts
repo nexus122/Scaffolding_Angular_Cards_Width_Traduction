@@ -22,6 +22,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { SectionComponent } from './components/section/section.component';
 import { CardComponent } from './components/card/card.component';
 import { ContainerComponent } from './components/container/container.component';
+import { DetailPageComponent } from './components/detail-page/detail-page.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ContainerComponent } from './components/container/container.component';
     SectionComponent,
     CardComponent,
     ContainerComponent,
+    DetailPageComponent,
   ],
   imports: [
     BrowserModule,

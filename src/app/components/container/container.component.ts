@@ -13,22 +13,15 @@ export class ContainerComponent implements OnInit {
   ) {}
 
   pokemons: any = this.obtainDataService.getData();
-  pokemonDragon: any = this.obtainDataService.getElementForType('Dragon');
-  firstPokemon: any = this.obtainDataService.getSingleElement(0);
 
   ngOnInit() {
     this.activatedRoute.params.subscribe((event) => {
-      let id = this.activatedRoute.snapshot.params['id'];
       let type = this.activatedRoute.snapshot.params['type'];
-      console.log(id);
-      console.log(type);
-
-      if(id){
-        this.pokemons = this.obtainDataService.getSingleElement(id);
-      }
 
       if(type){
+        console.log("Existe Type");
         this.pokemons = this.obtainDataService.getElementForType(type);
+        console.log("Pokemons: ", this.pokemons);
       }
     });
   }

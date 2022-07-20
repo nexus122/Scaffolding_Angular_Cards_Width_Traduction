@@ -1,11 +1,13 @@
-<div>    
-    <div class="bg card" [style.background-image]="'url('+pokemon.img+')'">
-        <div class="panel-info is-flex is-justify-content-flex-end is-align-items-center is-flex-direction-column">
-            <div class="is-flex">
-                <p class="title has-text-white mr-4">#{{pokemon.id}}</p>
-                <p class="title has-text-white">{{pokemon.name}}</p>
-            </div>
-            <p>{{pokemon.type}}</p>
-        </div>        
+<a [routerLink]="'/detail/'+pokemon.id">
+    <div>    
+        <div class="bg card" [style.background-image]="'url('+pokemon.img+')'">
+            <div class="panel-info is-flex is-justify-content-flex-end is-align-items-center is-flex-direction-column">
+                <div class="is-flex">
+                    <p class="title has-text-white mr-4">#{{pokemon.id}}</p>
+                    <p class="title has-text-white">{{pokemon.name}}</p>
+                </div>
+                <p>{{pokemon.type}}</p>
+            </div>        
+        </div>
     </div>
-</div>
+</a>

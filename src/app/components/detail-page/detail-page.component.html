@@ -1,0 +1,18 @@
+<main>
+  <div class="box">
+    <!-- Imagen del pokemon-->
+    <img [src]="pokemon.img" alt="" />
+
+    <!-- Info del pokemon -->
+    <h1 class="title has-text-centered"><b>#{{pokemon.id}}</b> {{ pokemon.name }}</h1>
+    <div class="is-flex is-justify-content-space-around ">
+      <p class="has-text-centered tag" *ngFor="let element of pokemon.type"><a [routerLink]="'/type/'+element">{{ element }}</a></p>
+    </div>
+
+    <!-- btn de vuelta -->
+    <div class="is-flex is-justify-content-space-around ">
+      <button class="button " routerLink="">ir a la home</button>
+    </div>    
+
+  </div>
+</main>

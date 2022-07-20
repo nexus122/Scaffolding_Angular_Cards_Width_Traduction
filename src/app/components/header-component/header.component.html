@@ -13,9 +13,24 @@
   </mat-menu>
 
   <span>{{ "header.title" | translate }}</span>
+  
   <span class="example-spacer"></span>
-  <div class="links ml-4 is-flex is-2">
-    <a (click)="useLanguage('es')">Español</a> /
-    <a (click)="useLanguage('en')">Ingles</a>
-  </div>
+
+  <button mat-icon-button [matMenuTriggerFor]="lenguages" aria-label="Example icon-button with a menu">
+    <mat-icon>language</mat-icon>
+  </button>
+
+  <mat-menu #lenguages="matMenu">
+    <!-- BTN Español -->
+    <button mat-menu-item class="icon-menu" (click)="useLanguage('es')">
+      <img src="https://hatscripts.github.io/circle-flags/flags/es.svg" width="15" class="mr-2">
+      <span>{{'lenguajes.spanish' | translate}}</span>
+    </button>
+    
+    <!-- BTN Ingles -->
+    <button mat-menu-item class="icon-menu" (click)="useLanguage('en')">
+      <img src="https://hatscripts.github.io/circle-flags/flags/uk.svg" width="15" class="mr-2">
+      <span>{{'lenguajes.english' | translate}}</span>
+    </button>
+  </mat-menu>
 </mat-toolbar>
