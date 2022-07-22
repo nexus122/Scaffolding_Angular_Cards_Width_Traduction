@@ -6,7 +6,9 @@
                     <p class="title has-text-white mr-4">#{{pokemon.id}}</p>
                     <p class="title has-text-white">{{pokemon.name}}</p>
                 </div>
-                <p>{{pokemon.type}}</p>
+                <div class="is-flex is-justify-content-center is-align-items-center gap">
+                    <p class="tag" *ngFor="let type of pokemon.type">{{type}}</p>
+                </div>
             </div>        
         </div>
     </div>

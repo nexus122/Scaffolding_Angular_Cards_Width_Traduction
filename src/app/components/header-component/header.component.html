@@ -5,11 +5,11 @@
     aria-label="Example icon-button with menu icon"
     [matMenuTriggerFor]="menu"
   >
-    <mat-icon>menu</mat-icon>
+    <i class="fa-solid fa-bars"></i>
   </button>
 
   <mat-menu #menu="matMenu">
-    <button mat-menu-item [routerLink]="['/']">Demo</button>
+    <button mat-menu-item routerLink="">Home</button>
   </mat-menu>
 
   <span>{{ "header.title" | translate }}</span>
@@ -17,7 +17,7 @@
   <span class="example-spacer"></span>
 
   <button mat-icon-button [matMenuTriggerFor]="lenguages" aria-label="Example icon-button with a menu">
-    <mat-icon>language</mat-icon>
+    <i class="fa-solid fa-language"></i>
   </button>
 
   <mat-menu #lenguages="matMenu">

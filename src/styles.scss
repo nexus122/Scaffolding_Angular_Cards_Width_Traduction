@@ -2,6 +2,42 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+$color-1: #F4D822;
+$color-2: #33BBA5;
+$color-3: #1F154F;
+$color-4: #C60F2A;
+$color-5: #E9D3AC;
+$color-6: white;
+
+.mat-toolbar{
+    background-color: $color-1 !important;
+    color: $color-3!important;
+}
+
+.tag{
+    background-color: $color-1!important;
+    color: $color-3!important;
+}
+
+.button{
+    border: 1px solid $color-1;
+    &:hover{
+        background-color: $color-1;
+        border: 1px solid $color-1;
+        color: $color-3;    
+    }
+}
+
+.page-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;    
+    background: $color-6;
+}
+
 .gap{
     gap: 1em;
 }

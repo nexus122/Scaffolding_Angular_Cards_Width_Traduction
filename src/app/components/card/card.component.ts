@@ -5,8 +5,8 @@ import { Component, Input } from '@angular/core';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
+
 export class CardComponent {
   @Input() pokemon:any
   constructor() { }
-
 }

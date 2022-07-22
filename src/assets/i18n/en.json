@@ -10,5 +10,7 @@
     "lenguajes":{
         "english": "English",
         "spanish": "Spanish"
-    }
+    },
+    "turn-back": "Turn Back",
+    "turn-home": "Turn to home"
 }

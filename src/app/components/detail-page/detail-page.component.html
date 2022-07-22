@@ -10,8 +10,9 @@
     </div>
 
     <!-- btn de vuelta -->
-    <div class="is-flex is-justify-content-space-around ">
-      <button class="button" (click)="navigation.goBack()" >ir a la home</button>
+    <div class="is-flex is-justify-content-space-around gap">
+      <button class="button" (click)="navigation.goBack()" >{{'turn-back' | translate}}</button>
+      <button class="button" routerLink="" >{{'turn-home' | translate}}</button>
     </div>    
 
   </div>
