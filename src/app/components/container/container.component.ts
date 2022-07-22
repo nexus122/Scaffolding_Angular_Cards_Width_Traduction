@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ObtainDataService } from '../../services/obtain-data.service';
 import { ActivatedRoute } from '@angular/router';
+import { NavigationServiceService } from 'src/app/services/navigation-service.service';
 @Component({
   selector: 'app-container',
   templateUrl: './container.component.html',
@@ -9,8 +10,11 @@ import { ActivatedRoute } from '@angular/router';
 export class ContainerComponent implements OnInit {
   constructor(
     private obtainDataService: ObtainDataService,
-    private activatedRoute: ActivatedRoute
-  ) {}
+    private activatedRoute: ActivatedRoute,
+    private navigation:NavigationServiceService
+  ) {
+    this.navigation.startSaveHistory()
+  }
 
   pokemons: any = this.obtainDataService.getData();
 
