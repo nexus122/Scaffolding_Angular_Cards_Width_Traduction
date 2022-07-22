@@ -2,8 +2,8 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/nexus122/scaffolding_angular_traductions/badge)](https://www.codefactor.io/repository/github/nexus122/scaffolding_angular_traductions)
 
-## Indice
-
+## Index
+- [🏗️ Scaffolding Structure](#scaffolding-structure)
 - [🎨 Frameworks css](#framework-css)
   - [Angular Material](#angular-material)
   - [Bulma](#bulma)
