@@ -12,7 +12,7 @@
 - [Pipes](#pipes)
 - [Versions](#versions)
 
-## 🎨 Frameworks Css
+## Frameworks Css
 
 Para facilitar el diseño he obtado por tener dos frameworks.
 
@@ -37,7 +37,7 @@ Translations are done with the library [ngx-translate](https://github.com/ngx-tr
 - "@ngx-translate/core": `14.0.0`
 - "@ngx-translate/http-loader": `7.0.0`
 
-## 🔗 Routing
+## Routing
 
 The scaffold has Angular routing installed with the <router-outlet> and a link configured.
 
@@ -87,7 +87,7 @@ export class CleanUrlPipe implements PipeTransform {
 
 ```
 
-## 📜 Versions
+## Versions
 
 - Angular CLI: `14.0.5`
 - Node: `16.14.2`
