@@ -4,6 +4,7 @@
 
 ## Index
 - [🏗️ Scaffolding Structure](#scaffolding-structure)
+- [🎨 Scss](#scss)
 - [🎨 Frameworks css](#framework-css)
   - [Angular Material](#angular-material)
   - [Bulma](#bulma)
@@ -75,8 +76,32 @@
 ````
 </details>
 
-## Framework Css
+## Scss
+I use Scss to be able to create variables that we will use to define the colours of the application and other default properties in a single place, so that changing them globally is much easier.
+### Scss Vars
+Here are some of the colours we have defined:
+```` Scss
+$color-1: #F4D822;
+$color-2: #33BBA5;
+$color-3: #1F154F;
+$color-4: #C60F2A;
+$color-5: #E9D3AC;
+$color-6: white;
+````
+In styles.scss I define the styles for some of the most common elements on the web, for example:
+```` Scss
+.button{
+    border: 1px solid $color-1;
+    &:hover{
+        background-color: $color-1;
+        border: 1px solid $color-1;
+        color: $color-3;    
+    }
+}
+````
+In this case we create a button with a built-in hover, which changes the background colour of the button to fill it.
 
+## Framework Css
 In order to make the layout work easier I have used the following frameworks
 
 - [Angular Material](https://material.angular.io/)
