@@ -16,7 +16,7 @@
 ## Scaffolding Structure
 
 <details>
-<summary>Click to see the project structure</summary>
+  <summary><b>Click to see the project structure</b></summary>
 
 ````
 - 📁 src
@@ -74,7 +74,8 @@
   - 📜 test.ts
 ````
 </details>
-## Frameworks Css
+
+## framework Css
 
 In order to make the layout work easier I have used the following frameworks
 
