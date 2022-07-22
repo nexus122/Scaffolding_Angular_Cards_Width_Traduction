@@ -75,7 +75,7 @@
 ````
 </details>
 
-## framework Css
+## Framework Css
 
 In order to make the layout work easier I have used the following frameworks
 
