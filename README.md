@@ -1,7 +1,16 @@
 # Scaffolding_Angular_Traductions
+
+## Indice
+- [Frameworks css](#‍🎨-frameworks-css)
+    - [Angular Material](#angular-material)
+    - [Bulma](#bluma)
+- [Translations](#✏️-translations)
+- [Routing](#🔗-routing)
+- [Versions](#📜-versions)
+
 [![CodeFactor](https://www.codefactor.io/repository/github/nexus122/scaffolding_angular_traductions/badge)](https://www.codefactor.io/repository/github/nexus122/scaffolding_angular_traductions)
 
-## ‍🎨 Angular material + Bluma
+## ‍🎨 Frameworks Css
 Para facilitar el diseño he obtado por tener dos frameworks.
 - [Angular Material](https://material.angular.io/)
 - [Bluma](https://bulma.io/)
