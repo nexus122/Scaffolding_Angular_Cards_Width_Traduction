@@ -23,6 +23,7 @@ import { SectionComponent } from './components/section/section.component';
 import { CardComponent } from './components/card/card.component';
 import { ContainerComponent } from './components/container/container.component';
 import { DetailPageComponent } from './components/detail-page/detail-page.component';
+import { CleanUrlPipe } from './pipes/clean-url.pipe';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { DetailPageComponent } from './components/detail-page/detail-page.compon
     CardComponent,
     ContainerComponent,
     DetailPageComponent,
+    CleanUrlPipe,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-<a [routerLink]="'/detail/'+pokemon.id">
+<a [routerLink]="'/detail/'+(pokemon.name | cleanUrl)+'/'+pokemon.id">
     <div>    
         <div class="bg card" [style.background-image]="'url('+pokemon.img+')'">
             <div class="panel-info is-flex is-justify-content-flex-end is-align-items-center is-flex-direction-column">

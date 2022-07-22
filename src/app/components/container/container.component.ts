@@ -8,25 +8,19 @@ import { NavigationServiceService } from 'src/app/services/navigation-service.se
   styleUrls: ['./container.component.scss'],
 })
 export class ContainerComponent implements OnInit {
+  pokemons: any;
   constructor(
     private obtainDataService: ObtainDataService,
     private activatedRoute: ActivatedRoute,
     private navigation:NavigationServiceService
   ) {
-    this.navigation.startSaveHistory()
-  }
+    // Activate browsing history
+    this.navigation.startSaveHistory();
+    // We obtain the route data
+    this.pokemons = this.obtainDataService.getData();
+    let type = this.activatedRoute.snapshot.params['type'];
+    if(type) this.pokemons = this.obtainDataService.getElementForType(type);
+  }  
 
-  pokemons: any = this.obtainDataService.getData();
-
-  ngOnInit() {
-    this.activatedRoute.params.subscribe((event) => {
-      let type = this.activatedRoute.snapshot.params['type'];
-
-      if(type){
-        console.log("Existe Type");
-        this.pokemons = this.obtainDataService.getElementForType(type);
-        console.log("Pokemons: ", this.pokemons);
-      }
-    });
-  }
+  ngOnInit() {}
 }
