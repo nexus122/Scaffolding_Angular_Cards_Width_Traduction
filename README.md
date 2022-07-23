@@ -187,6 +187,87 @@ export class DetailPageComponent implements OnInit {
   pokemon = this.obtainDataService.getSingleElement(this.id); //👈 We call the service, passing it the type as a parameter
 }
 ```
+## Input
+I have used the **input** to send data from the parent components to the child components.
+In my case **container** is the parent, **section** is the child (in case I have to split the cards into different sections) and **card** is the child of section.
+
+### Container:
+**html:**
+```` html
+<main class="page-body">
+    <app-section [pokemons]="pokemons"></app-section> <!-- 👈 Send data to child -->
+    <!-- [pokemons]="pokemons" in this case send array of objects -->
+    <!-- 👆 input var | 👆 ts class atribute -->
+</main>
+````
+**Ts:**
+```` Ts
+  this.pokemons = this.obtainDataService.getData(); //👈 Obtain data to service
+````
+### Section:
+**html:**
+``` html
+<div class="gap is-flex is-flex-wrap-wrap is-justify-content-center is-align-content-center">    
+    <div *ngFor="let pokemon of pokemons">        
+        <app-card [pokemon]="pokemon"></app-card> <!--👈 Send data to  child -->
+        <!-- [pokemon]="pokemon" in this case send only one object-->
+        <!-- 👆 input var | 👆 ts class atribute -->
+    </div>    
+</div>
+```
+**Ts:**
+``` ts
+import { Component, Input } from '@angular/core'; // 👈 Import Angular Input
+
+@Component({
+  selector: 'app-section',
+  templateUrl: './section.component.html',
+  styleUrls: ['./section.component.scss']
+})
+
+export class SectionComponent{
+  @Input() pokemons:any // 👈 Create a Input var, obtain value of Container
+  constructor() { }
+}
+
+```
+
+### Card
+**html:**
+``` html
+<a [routerLink]="'/detail/'+(pokemon.name | cleanUrl)+'/'+pokemon.id">
+    <div>    
+        <div class="bg card" [style.background-image]="'url('+pokemon.img+')'">
+            <div class="panel-info is-flex is-justify-content-flex-end is-align-items-center is-flex-direction-column">
+                <div class="is-flex">
+                    <p class="title has-text-white mr-4">#{{pokemon.id}}</p>
+                    <p class="title has-text-white">{{pokemon.name}}</p>
+                </div>
+                <div class="is-flex is-justify-content-center is-align-items-center gap">
+                    <p class="tag" *ngFor="let type of pokemon.type">{{type}}</p>
+                </div>
+            </div>        
+        </div>
+    </div>
+</a>
+```
+**Ts**
+``` ts
+import { Component, Input } from '@angular/core'; // 👈 Import Angular Input
+
+@Component({
+  selector: 'app-card',
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.scss']
+})
+
+export class CardComponent {
+  @Input() pokemon:any // 👈 Create a Input var, obtain value of Container
+  constructor() { }
+}
+
+```
+
 
 ## Pipes
 In my case I use pipes to pass the name of x through the url so that it appears without %20 instead of a space and delete accents.
